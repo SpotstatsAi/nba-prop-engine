@@ -1,10 +1,84 @@
 body {
-  font-family: Arial;
-  background: #111;
-  color: #eee;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background: #0d0d0d;
+  color: #eaeaea;
+  font-family: Arial, sans-serif;
 }
 
-h1 {
-  font-size: 26px;
+#sidebar {
+  width: 280px;
+  background: #121212;
+  padding: 20px;
+  border-right: 1px solid #222;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+#main {
+  flex: 1;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+#propsPanel {
+  width: 320px;
+  background: #111;
+  padding: 20px;
+  border-left: 1px solid #222;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+h2 {
+  margin-top: 0;
+  color: #4dc0ff;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #4dc0ff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3aa7e3;
+}
+
+.gameCard {
+  background: #181818;
+  padding: 14px;
+  border: 1px solid #333;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+.teamEntry {
+  padding: 6px;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+}
+
+.teamEntry:hover {
+  background: #1e1e1e;
+}
+
+.propGreen {
+  color: #4dff88;
+  font-weight: bold;
+}
+
+.propYellow {
+  color: #ffd64d;
+  font-weight: bold;
+}
+
+.propRed {
+  color: #ff4d4d;
+  font-weight: bold;
 }
