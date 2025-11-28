@@ -54,7 +54,11 @@ function renderGames() {
   const gamesDiv = document.getElementById("games");
   gamesDiv.innerHTML = "";
 
-  const games = (scheduleData && scheduleData.today) || [];
+// Detect today's date in YYYY-MM-DD format
+const todayKey = new Date().toISOString().split("T")[0];
+
+// Pull the games for that date from schedule.json
+const games = scheduleData[todayKey] || [];
 
   if (!games.length) {
     gamesDiv.innerHTML = "<p>No games in schedule.today</p>";
@@ -66,8 +70,8 @@ function renderGames() {
     card.className = "gameCard";
 
     card.innerHTML = `
-      <strong>${game.away} @ ${game.home}</strong><br>
-      <span>${game.time || ""}</span>
+      <strong>${game.away_team} @ ${game.home_team}</strong><br>
+      <span>${game.time_et || ""}</span>
     `;
 
     card.onclick = () => showGameProps(game);
