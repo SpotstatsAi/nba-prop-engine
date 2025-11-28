@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Spotstats Props Engine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA Prop Engine</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Spotstats Props Engine</h1>
+  <div id="sidebar">
+    <h2>NBA Prop Engine</h2>
+    <button id="loadButton">Load Today’s Data</button>
 
-  <div id="app"></div>
+    <div id="teamsList"></div>
+  </div>
+
+  <div id="main">
+    <h2>Games Today</h2>
+    <div id="games"></div>
+  </div>
+
+  <div id="propsPanel">
+    <h2>Prop Recommendations</h2>
+    <div id="propsOutput"></div>
+  </div>
 
   <script src="app.js"></script>
 </body>
 </html>
+
