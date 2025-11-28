@@ -12,20 +12,29 @@
     <h2>NBA Prop Engine</h2>
     <button id="loadButton">Load Today’s Data</button>
 
+    <h3 class="sectionTitle">Teams</h3>
     <div id="teamsList"></div>
   </div>
 
   <div id="main">
     <h2>Games Today</h2>
+    <p class="hint">Click a game to generate prop tiers for that matchup.</p>
     <div id="games"></div>
   </div>
 
   <div id="propsPanel">
     <h2>Prop Recommendations</h2>
+
+    <div id="propsFilters">
+      <button data-filter="all" class="filterButton filterActive">All</button>
+      <button data-filter="green" class="filterButton">Green</button>
+      <button data-filter="yellow" class="filterButton">Yellow</button>
+      <button data-filter="red" class="filterButton">Red</button>
+    </div>
+
     <div id="propsOutput"></div>
   </div>
 
   <script src="app.js"></script>
 </body>
 </html>
-
