@@ -2,10 +2,12 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  background: #0d0d0d;
+  background: #0b0b0b;
   color: #eaeaea;
   font-family: Arial, sans-serif;
 }
+
+/* LAYOUT */
 
 #sidebar {
   width: 280px;
@@ -24,7 +26,7 @@ body {
 }
 
 #propsPanel {
-  width: 320px;
+  width: 340px;
   background: #111;
   padding: 20px;
   border-left: 1px solid #222;
@@ -32,41 +34,114 @@ body {
   overflow-y: auto;
 }
 
+/* TYPOGRAPHY */
+
 h2 {
   margin-top: 0;
   color: #4dc0ff;
 }
 
+.sectionTitle {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #999;
+}
+
+.hint {
+  font-size: 13px;
+  color: #888;
+}
+
+/* BUTTONS */
+
 button {
-  width: 100%;
-  padding: 12px;
+  padding: 10px 12px;
   background: #4dc0ff;
   border: none;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 button:hover {
   background: #3aa7e3;
 }
 
-.gameCard {
-  background: #181818;
-  padding: 14px;
-  border: 1px solid #333;
-  margin-bottom: 12px;
-  border-radius: 6px;
+#loadButton {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* TEAM LIST */
+
+#teamsList {
+  margin-top: 4px;
+  border-top: 1px solid #222;
 }
 
 .teamEntry {
-  padding: 6px;
-  border-bottom: 1px solid #333;
+  padding: 6px 4px;
+  border-bottom: 1px solid #222;
   cursor: pointer;
+  font-size: 13px;
 }
 
 .teamEntry:hover {
   background: #1e1e1e;
 }
+
+/* GAMES */
+
+.gameCard {
+  background: #181818;
+  padding: 12px;
+  border: 1px solid #333;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.gameCard:hover {
+  border-color: #4dc0ff;
+}
+
+/* PROPS PANEL */
+
+#propsFilters {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.filterButton {
+  flex: 1;
+  background: #222;
+  font-size: 13px;
+}
+
+.filterButton.filterActive {
+  background: #4dc0ff;
+  color: #000;
+}
+
+.propRow {
+  padding: 6px 4px;
+  border-bottom: 1px solid #222;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.propMeta {
+  font-size: 11px;
+  color: #999;
+}
+
+/* TIERS */
 
 .propGreen {
   color: #4dff88;
