@@ -61,7 +61,7 @@ const todayKey = new Date().toISOString().split("T")[0];
 const games = scheduleData[todayKey] || [];
 
   if (!games.length) {
-    gamesDiv.innerHTML = "<p>No games in schedule.today</p>";
+    gamesDiv.innerHTML = `<p>No games found for ${todayKey}</p>`;
     return;
   }
 
@@ -95,8 +95,9 @@ function showTeamPlayers(team) {
 /* ---------- PROP ENGINE ---------- */
 
 function showGameProps(game) {
-  const awayTeam = game.away;
-  const homeTeam = game.home;
+  const awayTeam = game.away_team;
+  const homeTeam = game.home_team;
+
 
   const awayPlayers = rostersData[awayTeam] || [];
   const homePlayers = rostersData[homeTeam] || [];
